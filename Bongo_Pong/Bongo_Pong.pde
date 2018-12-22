@@ -2,22 +2,24 @@ import ddf.minim.*;
 Minim minim;
 AudioSample sound;
 PImage backgroundImage;
-int paddlex = 300; 
-int paddley = 475;
+int paddleX = mouseX; 
+int paddleY = mouseY;
 void setup() {
   size(600, 500);
   background(0, 238, 0);
   minim = new Minim (this);
   backgroundImage = loadImage("BongoCat.jpg");
-  sound = minim.loadSample("moo 4.wav", 128);
+  sound = minim.loadSample("moo 4.wav", 128); 
 }
 void draw() {
-    image(backgroundImage, 0, 0, width, height);
+    if (intersects(ballx,bally,mouseX,mouseY,50)) { 
+    ballspeedx *=-1;  ballspeedy *=- 1;}
+  image(backgroundImage, 0, 0, width, height);
   fill(255,0,0 );
-  ellipse(paddlex,paddley, 25,25);
+  ellipse(mouseX,mouseY, 25,25);
  fill(238,232,170 );
    stroke(238,232,170);
-  rect(295, 485, 10, 10);
+  rect(mouseX-5, mouseY+10, 10, 20);
   
   fill(255, 0, 0);
   stroke(255, 0, 0);
@@ -35,9 +37,15 @@ void draw() {
   }
   if ( bally < 0) { 
     ballspeedy *= -1;
-    //sound.trigger();
+    sound.trigger();
 
   }
+}
+boolean intersects(int ballX, int ballY, int paddleX, int paddleY, int paddleLength) {
+     if (ballY > paddleY && ballX > paddleX && ballX < paddleX + paddleLength)
+          return true;
+     else 
+          return false;
 }
 
 int bally = 350;

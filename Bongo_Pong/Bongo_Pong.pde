@@ -32,7 +32,7 @@ void draw() {
   if ( ballx < 0) { 
     ballspeedx *= -1;
   }
-  if ( bally > height) { 
+  if ( bally >  height) { 
     ballspeedy *= -1;
   }
   if ( bally < 0) { 
@@ -42,7 +42,7 @@ void draw() {
   }
 }
 boolean intersects(int ballX, int ballY, int paddleX, int paddleY, int paddleLength) {
-     if (ballY > paddleY && ballX > paddleX && ballX < paddleX + paddleLength)
+     if (ballY > paddleY && ballX > paddleX && ballX < paddleX + paddleLength && ballY < paddleY + paddleLength )
           return true;
      else 
           return false;

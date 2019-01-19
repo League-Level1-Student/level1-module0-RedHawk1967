@@ -1,17 +1,19 @@
 void setup() {
-  size(600, 600);
-  background(281, 378, 342);
+  size(600,600);
+  background(255, 255, 255);
 }
 int ellipseposy = 590;
 int ellipseposx = 590;
 void draw() { 
-   ellipseposy = (int)random(ellipseposy);
- ellipseposx = (int)random(ellipseposx);
-    ellipse (getWormX(ellipseposx), getWormY(ellipseposy), 25, 25);
+  makeMagical();
+  for(int i = 0; i <300;i++) {
+  ellipseposy = (int)random(800);
+ ellipseposx = (int)random(800);
+    ellipse (getWormX(i), getWormY(i), 25, 25);
     fill(255, 0, 0   );
     stroke(255,0, 0   );
-    ellipseposy --;
-    ellipseposx --;
+   
+  }
   
  
 

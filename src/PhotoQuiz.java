@@ -14,6 +14,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
+import org.omg.CosNaming.NamingContextExtPackage.AddressHelper;
+
 public class PhotoQuiz {
 
 	public static void main(String[] args) throws Exception {
@@ -28,28 +30,34 @@ Component bob;
 		// 3. use the "createImage()" method below to initialize your Component
 	bob = createImage(tulips);
 		// 4. add the image to the quiz window
-
+       quizWindow.add(bob);
 		// 5. call the pack() method on the quiz window
-
+       quizWindow.pack();
 		// 6. ask a question that relates to the image
-
+       		 String que  = JOptionPane.showInputDialog("What is my this dogs breed");
 		// 7. print "CORRECT" if the user gave the right answer
-
+       		 if (que .equals("Vizsla") || que .equals("vizsla") || que .equals("a good boi")) { JOptionPane.showMessageDialog(null,"You got it RIGHT!");
+				
+			}else{
+			JOptionPane.showMessageDialog(null,"You got it WRONG!");	
+			}
 		// 8. print "INCORRECT" if the answer is wrong
 
 		// 9. remove the component from the quiz window (you may not see the effect of this until step 12)
-
+quizWindow.remove(bob);
 		// 10. find another image and create it (might take more than one line of code)
-
+String crazy = "https://girlwritingcom.files.wordpress.com/2017/06/4617171-crazy-images.jpg?w=640";
 		// 11. add the second image to the quiz window
-
+Component bob2; bob2 = createImage(crazy);
 		// 12. pack the quiz window
-
+quizWindow.add(bob2);
 		// 13. ask another question
-
+String que2  = JOptionPane.showInputDialog("Is Mike crazy?");
 		// 14+ check answer, say if correct or incorrect, etc.
-
-	}
+if (que2 .equals("Yes") || que2 .equals("yes") )  { JOptionPane.showMessageDialog(null,"Your Right!");}else { JOptionPane.showMessageDialog(null,"Your WRONG");}
+	
+}
+	
 
 	private static Component createImage(String imageUrl) throws MalformedURLException {
 		URL url = new URL(imageUrl);

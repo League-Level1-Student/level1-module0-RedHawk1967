@@ -8,6 +8,7 @@ import java.applet.AudioClip;
 import java.awt.GridLayout;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.print.Printable;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -28,39 +29,44 @@ public class DrumKit implements MouseListener {
 
     private void getGoing() throws MalformedURLException {
    	 // 1. Make a JFrame variable and initialize it using "new JFrame()"
-   	 
+   	JFrame bob = new JFrame();
    	 // 2. Make the frame visible and 
     //     set its default close operation to JFrame.EXIT_ON_CLOSE
-   	 
+   	 bob.setVisible(true); bob.setDefaultCloseOperation(bob.EXIT_ON_CLOSE);
    	 // 3. Set the size of the frame
-   	 
+   	 bob.setSize(100,100);
    	 // 4. Set the title of the frame
-   	 
+   	 bob.setTitle("Wassup");
    	 // 5. Make a JPanel variable and initialize it using "new JPanel().
-   	 
+   	 JPanel bob2 = new JPanel();
    	 // 6. Add the panel to the frame. (The panel is invisible.)
-    
+    bob.add(bob2);
    	 // 7. Download an image of a drum from the Internet. Drop it into your Eclipse project under "default package".
    	 // 8. Put the name of your image in a String variable.
-    
+    String drum = "drum.jpg";
    	 // 9. Edit the next line to use your String variable
 // drumLabelWithImage = createLabelImage(drumImageString);
-   	 
+    drumLabelWithImage = createLabelImage(drum);
    	 // 10. Add the image to the panel
-    
+    bob2.add(drumLabelWithImage);
    	 // 11. Set the layout of the panel to "new GridLayout()"
-    
+    bob2.setLayout(new GridLayout());
       	 // 12. call the pack() method on the frame.  Run your program. Do you see your drum image?
-   	  
+   	  bob.pack();
    	 // 13. add this mouse listener to drumLabelWithImage
-    	
+    	drumLabelWithImage.addMouseListener(this);
      	 // 18. Add more images to make a drumkit. Remember to add this mouse listener to each one.
-
+String reddrum = "red drum.png";
+JLabel drumfish =  createLabelImage(reddrum);
+    bob2.add(drumfish);
+    bob2.setLayout(new GridLayout());
+    bob.pack();
+    drumfish.addMouseListener(this);
     }
 
     public void mouseClicked(MouseEvent e) {
    	 // 14. Print "mouse clicked" to the console. Run your program and watch the console to see when this is printed.
-
+System.out.println("hi"); playSound("Seagull sounds.mp3");
    	 JLabel drumClicked = (JLabel) e.getSource();  // This line gets the label that the mouse clicked on
    	 
    	 // 15. Download a drum sound and drop it into your "default package". You can find it on freesound.org. To download it, log in as leagueofamazing/code4life.

@@ -66,7 +66,7 @@ JLabel drumfish =  createLabelImage(reddrum);
 
     public void mouseClicked(MouseEvent e) {
    	 // 14. Print "mouse clicked" to the console. Run your program and watch the console to see when this is printed.
-System.out.println("hi"); playSound("Seagull sounds.mp3");
+System.out.println("hi"); playSound("c3.wav");
    	 JLabel drumClicked = (JLabel) e.getSource();  // This line gets the label that the mouse clicked on
    	 
    	 // 15. Download a drum sound and drop it into your "default package". You can find it on freesound.org. To download it, log in as leagueofamazing/code4life.

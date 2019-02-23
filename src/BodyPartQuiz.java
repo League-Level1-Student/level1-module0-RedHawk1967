@@ -39,7 +39,7 @@ public class BodyPartQuiz {
 
 		// 4. Ask the user who this person is and store their answer
 		String guess = JOptionPane.showInputDialog("who is this?");
-		if (guess.equalsIgnoreCase("arnold schwarzenegger")) {
+		if (guess.equalsIgnoreCase("arnold schwarzenegger")||guess .equalsIgnoreCase("arnold") ) {
 			JOptionPane.showMessageDialog(null, "Your Right!");
 			score++;
 		} else {
@@ -58,7 +58,7 @@ public class BodyPartQuiz {
 		JOptionPane.showMessageDialog(null, "Your Score is " + score);
 		// 9. .... repeat for all your images.....
 		guess = JOptionPane.showInputDialog("who is this?");
-		if (guess.equalsIgnoreCase("leonardo dicaprio")) {
+		if (guess.equalsIgnoreCase("leonardo dicaprio")||guess .equalsIgnoreCase("leonardo")) {
 			JOptionPane.showMessageDialog(null, "Your Right!");
 			score++;
 		} else {
@@ -69,7 +69,7 @@ public class BodyPartQuiz {
 	showNextImage();
 	
 	guess = JOptionPane.showInputDialog("who is this?");
-	if (guess.equalsIgnoreCase("morgan freeman")) {
+	if (guess.equalsIgnoreCase("morgan freeman")||guess .equalsIgnoreCase("morgan")) {
 		JOptionPane.showMessageDialog(null, "Your Right!");
 		score++;
 	} else {
@@ -78,6 +78,19 @@ public class BodyPartQuiz {
 	JOptionPane.showMessageDialog(null, "Your Score is " + score);
 
 showNextImage();
+	
+guess = JOptionPane.showInputDialog("who is this?");
+if (guess.equalsIgnoreCase("jack")||guess .equalsIgnoreCase("jack")) {
+	JOptionPane.showMessageDialog(null, "Your Right!");
+	score++;
+} else {
+	JOptionPane.showMessageDialog(null, "You Wrong! That's jack");
+}
+JOptionPane.showMessageDialog(null, "Your Score is " + score);
+
+showNextImage();
+	
+	
 	
 	}
 

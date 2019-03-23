@@ -1,4 +1,5 @@
 import java.applet.AudioClip;
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.URL;
@@ -52,18 +53,23 @@ public class JackInTheBox implements ActionListener {
 	}
 	
 	public static void main(String[] args) {
-System.out.println("hello?");
-	
+System.out.println("hello?"); 
+	JackInTheBox jack = new JackInTheBox();
+	jack.ui();
 	}
 public void ui() {
-
+	
 	JFrame frame = new JFrame();
 	JButton button = new JButton();
 	JPanel panel = new JPanel();
+	frame.pack();
+	button.setPreferredSize(new Dimension(300,300));
 	panel.add(button);
 	frame.add(panel);
 	frame.setVisible(true);
 	button.addActionListener(this);
+	frame.pack();
+
 	
 
 

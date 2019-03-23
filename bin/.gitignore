@@ -3,6 +3,7 @@
 /DuelingButtons.class
 /FortuneCookies.class
 /Houses.class
+/JackInTheBox.class
 /MyFirstSwingGUI.class
 /PhotoQuiz.class
 /Recipes.html
@@ -17,6 +18,7 @@
 /extra/
 /homer-woohoo.wav
 /jack.jpeg
+/jack.png
 /jackInTheBox.png
 /java.png
 /leonardo.jpeg
@@ -24,5 +26,6 @@
 /red drum.png
 /sawing-wood-daniel_simon.wav
 /snare.jpg
-/JackInTheBox.class
-/jack.png
+/SoundEffects.class
+/cannon.wav
+/acco.wav
